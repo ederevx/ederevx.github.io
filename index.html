@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   
     <!-- Import Bootstrap -->
-    <link href="frameworks/bootstrap-5.0.2-dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="packages/bootstrap-5.0.2-dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+
     <title>Edrick Sinsuan</title>
   </head>
 
   <body>
     <!-- Import Bootstrap -->
-    <script src="frameworks/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="packages/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 
     <div id="external-container" class="container-fluid">
-      <nav id="nav-bar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top px-3">
-        <header id="header" class="container-fluid">
+      <nav id="nav-bar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <header id="header" class="px-5 container-fluid">
           <a class="navbar-brand display-1 fs-2" href="#">Edrick Sinsuan</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -126,8 +127,40 @@
           <div class="container-fluid" id="pc-title">
             <h1 class="display-3">Projects</h1>
           </div>
-          <article>
-          </article>
+          <article id="pc-body">
+            <div class="container-fluid" id="pc-row-container">
+              <div class="row mt-2" id="pc-row">
+                <a class="btn btn-outline-dark col-xl-3 m-2" href="https://github.com/ederevx/ederevx.github.io" target="_blank">
+                  <div class="card-body text-start">
+                    <h5 class="card-title">ederevx.github.io</h5>
+                    <h6 class="card-subtitle mb-2">Website</h6>
+                    <p class="card-text">Languages: HTML, CSS</p>
+                  </div>
+                </a>
+                <a class="btn btn-outline-dark col-xl-3 m-2" href="https://github.com/ederevx/android_scripts" target="_blank">
+                  <div class="card-body text-start">
+                    <h5 class="card-title">Android Build Scripts for OnePlus 5T</h5>
+                    <h6 class="card-subtitle mb-2">Linux Bash Script</h6>
+                    <p class="card-text">Languages: Bash/Shell</p>
+                  </div>
+                </a>
+                <a class="btn btn-outline-dark col-xl-3 m-2" href="https://github.com/ederevx/x-ft_kernel_oneplus_msm8998" target="_blank">
+                  <div class="card-body text-start">
+                    <h5 class="card-title">X-FT Kernel for OnePlus 5T</h5>
+                    <h6 class="card-subtitle mb-2">Linux Kernel, Version 4.14</h6>
+                    <p class="card-text">Languages: C, Makefile, Shell</p>
+                  </div>
+                </a>
+                <a class="btn btn-outline-dark col-xl-3 m-2" href="https://github.com/ederevx/x_kernel_oneplus_msm8998" target="_blank">
+                  <div class="card-body text-start">
+                    <h5 class="card-title">X Kernel for OnePlus 5T</h5>
+                    <h6 class="card-subtitle mb-2">Linux Kernel, Version 4.4</h6>
+                    <p class="card-text">Languages: C, Makefile, Shell</p>
+                  </div>
+                </a>
+              </div> <!-- pc-row -->
+            </div> <!-- pc-row-container -->
+          </article> <!-- pc-body -->
         </div> <!-- projects-content -->
 
         <br id="contact">
@@ -135,8 +168,21 @@
           <div class="container-fluid" id="cc-title">
             <h1 class="display-3">Contact</h1>
           </div>
-          <article>
-          </article>
+          <article id="cc-body">
+            <div class="container-fluid" id="cc-row-container">
+              <div class="row mt-2" id="cc-row">
+                <a class="btn btn-outline-dark col-md-3 m-2" href="https://github.com/ederevx" target="_blank">
+                  <h2 class="display-5 fs-2">Github</h2>
+                </a>
+                <a class="btn btn-outline-dark col-md-3 m-2" href="https://www.linkedin.com/in/ederevx" target="_blank">
+                  <h2 class="display-5 fs-2">LinkedIn</h2>
+                </a>
+                <a class="btn btn-outline-dark col-md-3 m-2" href="mailto:evcsinsuan@gmail.com" target="_blank">
+                  <h2 class="display-5 fs-2">Email</h2>
+                </a>
+              </div> <!-- cc-row -->
+            </div> <!-- cc-row-container -->
+          </article> <!-- cc-body -->
         </div> <!-- contact-content -->
       </main> <!-- main-content -->
 
