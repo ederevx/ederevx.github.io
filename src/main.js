@@ -1,42 +1,3 @@
-let root_container = `<div id="root-container" class="container-fluid"></div>`;
-
-/* Initialize the root container */
-document.write(root_container);
-
-let navbar_container = `<div id="navbar-container"></div>`;
-let main_container = `<main id="main-container"></main>`;
-let footer_container = `<footer id="footer-container"></footer>`;
-
-/* Configure the root-container */
-document.getElementById("root-container").innerHTML = navbar_container + main_container + footer_container;
-
-let navbar_content = `
-	<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-		<header id="header" class="px-5 container-fluid">
-		<a class="navbar-brand display-1 fs-2" href="#">Edrick Sinsuan</a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbar-content">
-			<ul class="navbar-nav navbar-nav-scroll">
-			<li class="nav-item">
-				<a class="nav-link" href="#about">About</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#projects">Projects</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#contact">Contact</a>
-			</li>
-			<ul>
-		</div>
-		</header>
-	</nav>
-`;
-
-/* Configure the navbar-container */
-document.getElementById("navbar-container").innerHTML = navbar_content;
-
 let about_content = `
 	<br id="about">
 	<div id="about-content" class="m-2 mt-5 p-3 container-lg">
@@ -190,10 +151,6 @@ let contact_content = `
 	</div> <!-- contact-content -->
 `;
 
-/* Configure the main-container */
-document.getElementById("main-container").innerHTML = about_content + projects_content + about_content;
-
-let footer_content = `<p class="text-muted text-center">Copyright (C) 2024, Edrick Sinsuan</p>`;
-
-/* Configure the footer-container */
-document.getElementById("footer-container").innerHTML = footer_content;
+export function get_main_content() {
+	return about_content + projects_content + contact_content;
+}

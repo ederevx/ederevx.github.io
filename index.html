@@ -13,6 +13,12 @@
   <body>
     <!-- Import Bootstrap -->
     <script src="packages/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="src/main.js"></script>
+
+    <!-- Only initialize the root-container div in index.html, 
+         handle everything else in javascript -->
+    <div id="root-container"></div>
+
+    <!-- Handle everything in root.js -->
+    <script type="module" src="src/root.js"></script>
   </body>
 </html>
