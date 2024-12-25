@@ -1,3 +1,18 @@
+import * as con from "./common/container.js";
+
+const local_props = {
+	name: "navbar",
+}
+
+export const props = {
+	name: local_props.name,
+	container: con.create_fluid(local_props.name, "div"),
+}
+
+export function set_content(element) {
+	element.innerHTML = navbar_content;
+}
+
 let navbar_content = `
 	<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 		<header id="header" class="px-5 container-fluid">
@@ -21,7 +36,3 @@ let navbar_content = `
 		</header>
 	</nav>
 `;
-
-export function set_navbar_content(element) {
-	element.innerHTML = navbar_content;
-}

@@ -1,24 +1,30 @@
-import { set_navbar_content } from "./navbar.js";
-import { set_main_content } from "./main.js";
-import { set_footer_content } from "./footer.js";
+import * as con from "./common/container.js";
 
-function set_root_content(element) {
-	let navbar_container = `<div id="navbar-container"></div>`;
-	let main_container = `<main id="main-container"></main>`;
-	let footer_container = `<footer id="footer-container"></footer>`;
+import * as nav from "./navbar.js";
+import * as main from "./main.js";
+import * as footer from "./footer.js";
 
-	element.classList.add("container-fluid");
-	element.innerHTML = navbar_container + main_container + footer_container;
+const root_props = {
+	name: "root",
+	parent: "body",
+	container: con.create_fluid("root", "div"),
+}
+
+function root_set_content(element) {
+	element.innerHTML += con.generate_str(root_props.container);
+	element.innerHTML += con.generate_str(nav.props.container);
+	element.innerHTML += con.generate_str(main.props.container);
+	element.innerHTML += con.generate_str(footer.props.container);
 }
 
 /* Configure the root-container */
-set_root_content(document.getElementById("root-container"));
+root_set_content(document.getElementById(root_props.parent));
 
 /* Configure the navbar-container */
-set_navbar_content(document.getElementById("navbar-container"));
+nav.set_content(document.getElementById(nav.props.container.id));
 
 /* Configure the main-container */
-set_main_content(document.getElementById("main-container"));
+main.set_content(document.getElementById(main.props.container.id));
 
 /* Configure the footer-container */
-set_footer_content(document.getElementById("footer-container"));
+footer.set_content(document.getElementById(footer.props.container.id));

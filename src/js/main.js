@@ -1,3 +1,18 @@
+import * as con from "./common/container.js";
+
+const local_props = {
+	name: "main",
+}
+
+export const props = {
+	name: local_props.name,
+	container: con.create_fluid(local_props.name, "main"),
+}
+
+export function set_content(element) {
+	element.innerHTML = about_content + projects_content + contact_content;
+}
+
 let about_content = `
 	<br id="about">
 	<div id="about-content" class="m-2 mt-5 p-3 container-lg">
@@ -150,7 +165,3 @@ let contact_content = `
 		</article> <!-- cc-body -->
 	</div> <!-- contact-content -->
 `;
-
-export function set_main_content(element) {
-	element.innerHTML = about_content + projects_content + contact_content;
-}
