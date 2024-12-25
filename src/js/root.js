@@ -11,10 +11,10 @@ const root_props = {
 }
 
 function root_set_content(element) {
-	element.innerHTML += con.generate_str(root_props.container);
-	element.innerHTML += con.generate_str(nav.props.container);
-	element.innerHTML += con.generate_str(main.props.container);
-	element.innerHTML += con.generate_str(footer.props.container);
+	element.innerHTML += con.generate_html(root_props.container);
+	element.innerHTML += con.generate_html(nav.props.container);
+	element.innerHTML += con.generate_html(main.props.container);
+	element.innerHTML += con.generate_html(footer.props.container);
 }
 
 /* Configure the root-container */

@@ -14,6 +14,6 @@ export const create_fluid = function(id, element) {
 	return create(id, element, "container-fluid");
 }
 
-export const generate_str = function(container) {
+export const generate_html = function(container) {
 	return `<${container.element} id="${container.id}" class="${container.class_list}"></${container.element}>`;
 }
