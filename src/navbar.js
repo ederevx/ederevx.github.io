@@ -22,6 +22,6 @@ let navbar_content = `
 	</nav>
 `;
 
-export function get_navbar_content() {
-	return navbar_content;
+export function set_navbar_content(element) {
+	element.innerHTML = navbar_content;
 }

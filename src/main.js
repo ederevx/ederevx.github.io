@@ -151,6 +151,6 @@ let contact_content = `
 	</div> <!-- contact-content -->
 `;
 
-export function get_main_content() {
-	return about_content + projects_content + contact_content;
+export function set_main_content(element) {
+	element.innerHTML = about_content + projects_content + contact_content;
 }
